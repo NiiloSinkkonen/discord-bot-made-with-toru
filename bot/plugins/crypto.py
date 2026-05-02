@@ -2,13 +2,13 @@ import disnake
 import httpx
 from disnake.ext.commands import Bot, slash_command
 
-from ..plugin import Plugin
+from bot.plugin import Plugin
 
 API_URL = "https://api.binance.com/api/v3/ticker/price"
 
 
 class Crypto(Plugin):
-    def __init__(self):
+    def __init__(self) -> None:
         self.http = httpx.AsyncClient()
 
     @slash_command(description="Check current market value for a crypto")

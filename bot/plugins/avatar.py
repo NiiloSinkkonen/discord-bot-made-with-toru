@@ -1,7 +1,7 @@
 import disnake
 from disnake.ext.commands import Bot, slash_command
 
-from ..plugin import Plugin
+from bot.plugin import Plugin
 
 
 class Avatar(Plugin):

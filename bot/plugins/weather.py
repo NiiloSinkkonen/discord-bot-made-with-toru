@@ -66,5 +66,3 @@ def setup(bot: cum.Bot):
 
 
 # https://api.tomorrow.io/v4/weather/forecast ?units=metric &apikey=NIGA &location=new%20york
-
-# ?symbol=BTCUSD
