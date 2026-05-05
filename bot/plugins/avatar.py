@@ -1,10 +1,8 @@
 import disnake
-from disnake.ext.commands import Bot, slash_command
-
-from bot.plugin import Plugin
+from disnake.ext.commands import Bot, Cog, slash_command
 
 
-class Avatar(Plugin):
+class Avatar(Cog):
     @slash_command(name="avatar", description="displays persons avatar")
     async def avatar(
         self,

@@ -1,13 +1,11 @@
 import disnake
 import httpx
-from disnake.ext.commands import Bot, slash_command
-
-from bot.plugin import Plugin
+from disnake.ext.commands import Bot, Cog, slash_command
 
 API_URL = "https://api.binance.com/api/v3/ticker/price"
 
 
-class Crypto(Plugin):
+class Crypto(Cog):
     def __init__(self) -> None:
         self.http = httpx.AsyncClient()
 

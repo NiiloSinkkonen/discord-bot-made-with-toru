@@ -1,10 +1,8 @@
 import disnake
-from disnake.ext.commands import Bot, command, slash_command
-
-from bot.plugin import Plugin
+from disnake.ext.commands import Bot, Cog, command, slash_command
 
 
-class Summon(Plugin):
+class Summon(Cog):
     @slash_command(description="summon person by sending private message")
     async def summon(
         self,

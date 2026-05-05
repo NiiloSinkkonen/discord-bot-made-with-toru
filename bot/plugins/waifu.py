@@ -1,14 +1,12 @@
 import disnake
 import httpx
 from disnake import Option, OptionType
-from disnake.ext.commands import Bot, slash_command
-
-from bot.plugin import Plugin
+from disnake.ext.commands import Bot, Cog, slash_command
 
 REACTION_URL = "https://api.otakugifs.xyz/gif"
 
 
-class Waifu(Plugin):
+class Waifu(Cog):
     def __init__(self) -> None:
         self.http = httpx.AsyncClient()
 

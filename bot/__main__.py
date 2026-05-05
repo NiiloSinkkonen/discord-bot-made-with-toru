@@ -10,7 +10,6 @@ bot = commands.Bot(
     command_prefix="!",
     intents=disnake.Intents.all(),
     reload=True,
-    test_guilds=[705809739912577094],
 )
 
 
