@@ -84,7 +84,7 @@ class Waifu(Cog):
 
     @slash_command(description="Confused the person you want to confused")
     async def confused(self, inter: disnake.ApplicationCommandInteraction, member: disnake.Member) -> None:
-        await self.send_reaction(inter, member, "confused", "{author} is confused about {targett}")
+        await self.send_reaction(inter, member, "confused", "{author} is confused about {target}")
 
     @slash_command(description="Cry the person you want to cry")
     async def cry(self, inter: disnake.ApplicationCommandInteraction, member: disnake.Member) -> None:
