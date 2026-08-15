@@ -12,7 +12,7 @@ class NicknameSnipe(Cog):
             return
         channel = self.bot.get_channel(1452715200896700640)
 
-        await channel.send(f"**{before.display_name}** change their nick to **{after.display_name}**")
+        await channel.send(f"**{before.global_name or before.name}** changed from **{before.display_name}** to **{after.display_name}**")
 
 
 def setup(bot: Bot):
