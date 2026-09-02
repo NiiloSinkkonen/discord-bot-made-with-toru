@@ -1,7 +1,7 @@
 import io
 
 import disnake
-import httpx
+import httpx2
 from disnake.ext.commands import Bot, Cog, slash_command
 from disnake.utils import MISSING
 
@@ -10,7 +10,7 @@ WORD_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 
 class Dictionary(Cog):
     def __init__(self) -> None:
-        self.http = httpx.AsyncClient()
+        self.http = httpx2.AsyncClient()
 
     @slash_command(description="Search in dictionary")
     async def define(self, inter: disnake.ApplicationCommandInteraction, word: str) -> None:
@@ -35,7 +35,7 @@ class Dictionary(Cog):
             definition = data[0]["meanings"][0]["definitions"][0]["definition"]
             await inter.send(f"The definition of **{word}** is _{definition}_ ", file=discord_file)
         except Exception as e:
-            await inter.send(f"nigger nogger fialed because you are gei = {e}")
+            await inter.send(f"nigger nogger fialed because you are gei = {e}", ephemeral=True)
 
 
 def setup(bot: Bot):

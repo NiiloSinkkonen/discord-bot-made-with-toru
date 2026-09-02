@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 import disnake
-import httpx
+import httpx2
 from disnake.ext import commands as cum
 from disnake.utils import format_dt
 
@@ -29,7 +29,7 @@ ERRORS = {
 class Weather(cum.Cog):
     def __init__(self, bot: cum.Bot):
         self.bot = bot
-        self.http = httpx.AsyncClient(
+        self.http = httpx2.AsyncClient(
             base_url="https://api.tomorrow.io/v4/weather",
             params={
                 "units": "metric",

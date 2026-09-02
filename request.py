@@ -1,12 +1,12 @@
 import asyncio
 
-import httpx
+import httpx2
 
 API_URL = "https://api.binance.com/api/v3/ticker/price"
 
 
 async def main():
-    client = httpx.AsyncClient()
+    client = httpx2.AsyncClient()
     response = await client.get(API_URL, params={"symbol": "BTCUSD"})
     data = response.json()
     print(data["symbol"])

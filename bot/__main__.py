@@ -1,5 +1,10 @@
 import os
 
+from httpx2 import alias_httpx
+
+alias_httpx()
+
+
 import disnake
 from disnake.ext import commands
 from dotenv import load_dotenv

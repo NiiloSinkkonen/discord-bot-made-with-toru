@@ -1,5 +1,5 @@
 import disnake
-from disnake.ext.commands import Bot, Cog, command, slash_command
+from disnake.ext.commands import Bot, Cog, slash_command
 
 
 class Summon(Cog):
