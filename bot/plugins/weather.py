@@ -63,6 +63,3 @@ class Weather(cum.Cog):
 
 def setup(bot: cum.Bot):
     bot.add_cog(Weather(bot))
-
-
-# https://api.tomorrow.io/v4/weather/forecast ?units=metric &apikey=NIGA &location=new%20york

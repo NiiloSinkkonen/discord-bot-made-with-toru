@@ -12,7 +12,7 @@ class Ping(cum.Cog):
 
     @cum.slash_command(name="ping", description="Check bot latency")
     async def slash_ping(self, inter: disnake.ApplicationCommandInteraction):
-        await inter.response.send_message(f"Pong! {round(self.bot.latency * 1000)}ms")
+        await inter.send(f"Pong! {round(self.bot.latency * 1000)}ms")
 
 
 def setup(bot: cum.Bot):
