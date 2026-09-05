@@ -1,5 +1,5 @@
 import disnake
-import httpx
+import httpx2
 from disnake import Option, OptionType
 from disnake.ext.commands import Bot, Cog, slash_command
 
@@ -8,7 +8,7 @@ REACTION_URL = "https://api.otakugifs.xyz/gif"
 
 class Waifu(Cog):
     def __init__(self) -> None:
-        self.http = httpx.AsyncClient()
+        self.http = httpx2.AsyncClient()
 
     async def send_reaction(
         self,
@@ -84,7 +84,7 @@ class Waifu(Cog):
 
     @slash_command(description="Confused the person you want to confused")
     async def confused(self, inter: disnake.ApplicationCommandInteraction, member: disnake.Member) -> None:
-        await self.send_reaction(inter, member, "confused", "{author} is confused about {target}")
+        await self.send_reaction(inter, member, "confused", "{author} is confused about {targett}")
 
     @slash_command(description="Cry the person you want to cry")
     async def cry(self, inter: disnake.ApplicationCommandInteraction, member: disnake.Member) -> None:

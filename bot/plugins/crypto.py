@@ -1,5 +1,5 @@
 import disnake
-import httpx
+import httpx2
 from disnake.ext.commands import Bot, Cog, slash_command
 
 API_URL = "https://api.binance.com/api/v3/ticker/price"
@@ -7,7 +7,7 @@ API_URL = "https://api.binance.com/api/v3/ticker/price"
 
 class Crypto(Cog):
     def __init__(self) -> None:
-        self.http = httpx.AsyncClient()
+        self.http = httpx2.AsyncClient()
 
     @slash_command(description="Check current market value for a crypto")
     async def crypto(self, inter: disnake.ApplicationCommandInteraction, coin: str, currency: str):
